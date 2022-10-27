@@ -14,8 +14,15 @@ const connect = function () {
   //when connects to server, gives name
   conn.on('connect', () => {
     console.log('Successfully connected to game server');
-    conn.write('Name: IGB')
+    conn.write('Name: IGB');
   })
+
+    // //when connects to server, moves up
+    // conn.on('connect', () => {
+    //   setInterval(() => {
+    //     conn.write('Move: up');
+    //   }, 50);
+    // });
   
   // interpret incoming data as text
   conn.setEncoding("utf8");
